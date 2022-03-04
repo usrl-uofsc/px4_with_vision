@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find px4_with_vision)/launch/vrpn.launch"/>
+  
+  <!-- Drop mocap pose to 50Hz -->
+  <node pkg="topic_tools" type="drop" name="mocap_drop"
+        args="/vrpn_client_node/F550/pose 17 20 /mavros/vision_pose/pose" >
+  </node>
+
+</launch>
