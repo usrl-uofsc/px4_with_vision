@@ -1,6 +1,6 @@
 <launch>
   <!-- Drop camera feed to 10Hz -->
-  <node pkg="topic_tools" type="drop" name="odom_drop"
+  <node pkg="topic_tools" type="drop" name="camera_drop"
     args="/camera/fisheye1/image_raw 2 3 /camera/fisheye1/image_raw_sub" >
   </node>
 
