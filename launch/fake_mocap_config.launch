@@ -1,0 +1,12 @@
+<launch>
+  <!-- Drop camera feed to 10Hz -->
+  <node pkg="topic_tools" type="drop" name="odom_drop"
+    args="/camera/fisheye1/image_raw 2 3 /camera/fisheye1/image_raw_sub" >
+  </node>
+
+  <!-- Start STag nodelet -->
+  <include file="$(find px4_with_vision)/launch/stagNodelet_t265.launch"/>
+
+  <!-- Start script that fakes external pose -->
+  <node pkg="px4_with_vision" type="stag_as_mocap.py" name="stag_as_mocap"/>
+</launch>
