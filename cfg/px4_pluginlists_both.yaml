@@ -44,7 +44,7 @@ plugin_blacklist:
 - log_transfer
 - mocap_pose_estimate
 - obstacle_distance
-- odom
+#- odom
 - play_tune
 - px4flow
 - rangefinder
@@ -52,7 +52,7 @@ plugin_blacklist:
 - wheel_odometry
 - vibration
 #- vision_pose_estimate
-#- vision_speed_estimate
+- vision_speed_estimate
 - mount_control
 
 plugin_whitelist: []
